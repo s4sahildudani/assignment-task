@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.footer {
+    background-image: url('../../images/footerBackground.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 40vh;
+    padding: 20px;
+    color: white;
+}
+
+.footerTop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    width: 80%;
+    padding-left: 12%;
+    margin-top: 2.5%;
+}
+
+.footerLogo {
+    max-width: 100px;
+    height: auto;
+}
+
+.footerTopRight {
+    display: flex;
+    gap: 100px;
+}
+
+.footerTopText {
+    font-size: 16px;
+    font-family: "Inter", sans-serif;
+}
+
+.footerDivider {
+    border: none;
+    border-top: 1px solid white;
+    margin: 20px 0;
+    width: 55%;
+    margin-left: 12%;
+    margin-top: 7%;
+}
+
+.footerBottom {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 35px;
+    padding-left: 12.2%;
+}
+
+.footerBottomText {
+    font-size: 14px;
+    font-family: "Inter", sans-serif;
+    margin: 0;
+    gap: 25px;
+}
+
+.footerVerticalLine {
+    height: 20px;
+    border-left: 1px solid white;
+}
+
+
+@media (max-width: 768px) {
+    .footerTop {
+        padding-left: 5%;
+        width: 90%;
+        margin-top: 5%;
+    }
+    
+   .footer {
+    height: 100%;
+   }
+    .footerTopRight, .footerBottom {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .footerTopRight {
+        text-align: center;
+    }
+
+    .footerDivider {
+        width: 90%;
+        margin: 15px 0;
+    }
+
+    .footerBottom {
+        padding-left: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .footerLogo {
+        max-width: 80px;
+    }
+
+    .footerTopText, .footerBottomText {
+        font-size: 14px;
+    }
+
+    .footerDivider {
+        width: 80%;
+    }
+
+    .footerVerticalLine {
+        height: 15px;
+    }
+
+    .footerBottom {
+        gap: 15px;
+    }
+
+    .footerTop {
+        padding-left: 0;
+        margin-top: 7%;
+    }
+}

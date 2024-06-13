@@ -1,0 +1,174 @@
+.productsContainer {
+    background-image: url('../../images/unsplash__FQsUF-0CHk.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    min-height: 100vh;
+    width: 100%;
+    align-items: flex-start;
+    padding: 20px 15%;
+    display: flex;
+    flex-direction: column;
+}
+
+.gradientBox {
+    background: linear-gradient(to left, hsla(0, 0%, 100%, 0), hsla(212, 100%, 96%, 1), hsla(212, 100%, 89%, 1));
+    padding: 15px;
+    border-radius: 10px;
+    color: hsla(209, 100%, 21%, 1);
+    width: fit-content;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.gradientBox h4 {
+    font-size: 16px;
+    margin: 0;
+}
+
+.productsContent {
+    font-size: 20px;
+    color: hsla(209, 100%, 21%, 1);
+    width: 60%;
+    margin-bottom: 20px;
+}
+
+.tabsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 100%;
+    margin-bottom: 20px;
+    justify-content: space-between; /* Ensures tabs are spaced evenly */
+}
+
+.tab {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    font-size: 12px;
+    text-align: center;
+    color: hsla(209, 100%, 21%, 1);
+    flex: 1 1 calc(25% - 10px); /* 4 tabs per row */
+    box-sizing: border-box;
+    max-width: 23%; /* Adjusts max width to fit 4 tabs */
+}
+
+.tab.selected {
+    background: linear-gradient(to right, hsla(227, 93%, 75%, 1), hsla(227, 100%, 61%, 0.44), hsla(227, 100%, 61%, 1));
+    color: black;
+}
+
+.mainGrid {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 20px;
+    position: relative;
+    margin-bottom: 20%;
+}
+
+.imageSide {
+    flex: 1;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.imageSide img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.textSide {
+    flex: 1;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+
+.textTitle {
+    font-size: 24px;
+    font-weight: bold;
+    color: hsla(209, 100%, 21%, 1);
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.textContent {
+    font-size: 16px;
+    color: hsla(209, 100%, 21%, 1);
+    text-align: center;
+}
+
+.arrowIcon {
+    cursor: pointer;
+    font-size: 2rem;
+    color: hsla(209, 100%, 21%, 1);
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    padding: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.arrowIcon.right {
+    right: 10px;
+    top: 50%;
+}
+
+.arrowIcon.left {
+    left: 10px;
+    top: 50%;
+}
+
+
+@media (max-width: 768px) {
+    .mainGrid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .imageSide, .textSide {
+        width: 100%;
+        height: auto;
+    }
+
+    .arrowIcon {
+        position: static;
+        margin: 10px;
+        display:none
+    }
+
+    .tabsContainer {
+        flex-direction: column;
+    }
+
+    .tab {
+        flex: 1 0 auto;
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .tab {
+        flex: 1 0 100%;
+        width: 100%;
+        max-width: 100%;
+    }
+}
